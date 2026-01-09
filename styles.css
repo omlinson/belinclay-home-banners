@@ -260,3 +260,39 @@ input::placeholder{color:rgba(17,17,19,.45)}
 @media (max-width: 520px){
   .footer__inner{grid-template-columns:1fr}
 }
+
+/* legacy Option B banners compatibility */
+.hero.left .bg,
+.hero.center .bg,
+.hero.minimal .bg {
+  background-image: url("hero.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+}
+
+.hero .shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.9),
+    rgba(255,255,255,.6),
+    transparent
+  );
+}
+
+.hero.minimal .shade.soft {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.85),
+    transparent
+  );
+}
+
+.hero .content {
+  position: relative;
+  padding: 48px;
+  max-width: 520px;
+}
