@@ -230,7 +230,11 @@ input::placeholder{color:rgba(17,17,19,.45)}
   background: linear-gradient(135deg, rgba(17,17,19,.10), rgba(17,17,19,.03));
   border:1px solid rgba(17,17,19,.10);
 }
-.ph--heroImg{background: linear-gradient(135deg, rgba(17,17,19,.10), rgba(17,17,19,.03))}
+.ph--heroImg{
+  background-image: url("hero.png");
+  background-size: cover;
+  background-position: center;
+}
 .ph--square{aspect-ratio:1/1}
 .ph--wide{aspect-ratio:16/10}
 .ph--small{aspect-ratio:1/1}
