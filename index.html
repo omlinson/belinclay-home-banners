@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Homepage mock — Bijoux</title>
+  <title>Homepage mock — Belinclay (light)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- TOP BAR -->
   <div class="topbar">
     <div class="wrap topbar__inner">
       <span>Livraison au Canada · Retours simples · Petites séries</span>
@@ -17,11 +18,12 @@
     </div>
   </div>
 
+  <!-- HEADER -->
   <header class="header">
     <div class="wrap header__inner">
       <div class="logo">BELINCLAY</div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation principale">
         <a href="#">Nouveautés</a>
         <a href="#">Boucles</a>
         <a href="#">Colliers</a>
@@ -33,10 +35,11 @@
         <button class="icon" aria-label="Recherche">⌕</button>
         <button class="icon" aria-label="Compte">○</button>
         <button class="icon" aria-label="Panier">◻</button>
-        <button class="menu" id="menuBtn" aria-label="Menu">Menu</button>
+        <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
       </div>
     </div>
 
+    <!-- mobile-only panel -->
     <div class="mobileNav" id="mobileNav" hidden>
       <a href="#">Nouveautés</a>
       <a href="#">Boucles</a>
@@ -47,36 +50,71 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap hero__inner">
-      <div class="hero__copy">
-        <p class="kicker">Bijoux faits à la main · Petites séries</p>
-        <h1>Des pièces discrètes, nettes, faciles à porter.</h1>
-        <p class="sub">
-          Une sélection pensée pour le quotidien: légère, stable, et suffisamment distincte pour se faire remarquer.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#">Magasiner la collection</a>
-          <a class="btn ghost" href="#">Voir les nouveautés</a>
-        </div>
-        <div class="trust">
-          <div class="trust__item"><strong>Livraison</strong><span>rapide</span></div>
-          <div class="trust__item"><strong>Retours</strong><span>simples</span></div>
-          <div class="trust__item"><strong>Stocks</strong><span>limités</span></div>
-        </div>
-      </div>
+  <!-- HERO: reuse Option B concept (intent-driven slider) -->
+  <section class="heroWrap" aria-label="Bannière principale">
+    <div class="wrap">
+      <div class="slider card">
+        <div class="slider__frame">
+          <div class="slide is-active">
+            <div class="hero hero--b">
+              <div class="hero__bg ph ph--heroImg" aria-label="Image hero (placeholder)"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content">
+                <div class="kicker">Marque</div>
+                <h1>Des pièces discrètes, nettes, faciles à porter.</h1>
+                <p>Bijoux faits à la main, en petites séries.</p>
+                <div class="actionsRow">
+                  <a class="btn primary" href="#">Découvrir la marque</a>
+                  <a class="btn ghost" href="#">Voir les nouveautés</a>
+                </div>
+                <div class="micro">Livraison rapide · Retours simples</div>
+              </div>
+            </div>
+          </div>
 
-      <div class="hero__media">
-        <div class="ph ph--hero" aria-label="Photo hero (placeholder)"></div>
-        <div class="tag">
-          <div class="tag__title">Collection du mois</div>
-          <div class="tag__meta">4 pièces · dès 30$</div>
-          <a class="tag__link" href="#">Découvrir</a>
+          <div class="slide">
+            <div class="hero hero--b">
+              <div class="hero__bg ph ph--heroImg" aria-label="Image collection (placeholder)"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content centerish">
+                <div class="kicker">Collection du mois</div>
+                <h1>Une sélection courte, prête à offrir.</h1>
+                <p>4 pièces · dès 30$ CAD · stocks limités.</p>
+                <div class="actionsRow">
+                  <a class="btn primary" href="#">Magasiner la collection</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="hero hero--b">
+              <div class="hero__bg ph ph--heroImg" aria-label="Image détail (placeholder)"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content minimalish">
+                <div class="kicker">Différenciateur</div>
+                <h1>Petites séries. Finition soignée.</h1>
+                <div class="actionsRow">
+                  <a class="btn ghost" href="#">Voir les pièces limitées</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__controls">
+          <button class="dot is-active" data-i="0" aria-label="Slide 1"></button>
+          <button class="dot" data-i="1" aria-label="Slide 2"></button>
+          <button class="dot" data-i="2" aria-label="Slide 3"></button>
+          <div class="spacer"></div>
+          <button class="btn small" id="prev">Précédent</button>
+          <button class="btn small" id="next">Suivant</button>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SHOP ENTRY -->
   <section class="section">
     <div class="wrap">
       <div class="section__head">
@@ -85,56 +123,54 @@
       </div>
 
       <div class="grid cats">
-        <a class="card" href="#">
+        <a class="card tile" href="#">
           <div class="ph ph--square"></div>
-          <div class="card__row">
-            <div class="card__title">Boucles</div>
-            <div class="card__meta">Best-sellers</div>
+          <div class="tile__row">
+            <div class="tile__title">Boucles</div>
+            <div class="tile__meta">Best-sellers</div>
           </div>
         </a>
-        <a class="card" href="#">
+        <a class="card tile" href="#">
           <div class="ph ph--square"></div>
-          <div class="card__row">
-            <div class="card__title">Colliers</div>
-            <div class="card__meta">Quotidien</div>
+          <div class="tile__row">
+            <div class="tile__title">Colliers</div>
+            <div class="tile__meta">Quotidien</div>
           </div>
         </a>
-        <a class="card" href="#">
+        <a class="card tile" href="#">
           <div class="ph ph--square"></div>
-          <div class="card__row">
-            <div class="card__title">Collections</div>
-            <div class="card__meta">Par thème</div>
+          <div class="tile__row">
+            <div class="tile__title">Collections</div>
+            <div class="tile__meta">Par thème</div>
           </div>
         </a>
-        <a class="card" href="#">
+        <a class="card tile" href="#">
           <div class="ph ph--square"></div>
-          <div class="card__row">
-            <div class="card__title">Cadeaux</div>
-            <div class="card__meta">Prêt à offrir</div>
+          <div class="tile__row">
+            <div class="tile__title">Cadeaux</div>
+            <div class="tile__meta">Prêt à offrir</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- FEATURED COLLECTION -->
   <section class="section section--alt">
     <div class="wrap">
-      <div class="feature">
+      <div class="feature card">
         <div class="feature__copy">
-          <p class="kicker">À la une</p>
-          <h2>Collection du mois: “Quartz doux”</h2>
-          <p>
-            Une mini-sélection de pièces faciles à porter, avec une palette douce et des formes géométriques.
-            Stocks limités — restock selon production.
-          </p>
-          <div class="cta">
-            <a class="btn primary" href="#">Voir la collection du mois</a>
+          <div class="kicker">À la une</div>
+          <h2>Collection du mois</h2>
+          <p>Une mini-sélection de pièces faciles à porter, avec un angle clair (couleur / forme / occasion).</p>
+          <div class="actionsRow">
+            <a class="btn primary" href="#">Voir la collection</a>
             <a class="btn ghost" href="#">Voir toutes les collections</a>
           </div>
           <ul class="bullets">
             <li>Léger et confortable</li>
             <li>Finition nette</li>
-            <li>Petites séries</li>
+            <li>Stocks limités</li>
           </ul>
         </div>
         <div class="feature__media">
@@ -149,6 +185,7 @@
     </div>
   </section>
 
+  <!-- BEST SELLERS -->
   <section class="section">
     <div class="wrap">
       <div class="section__head section__head--row">
@@ -160,50 +197,51 @@
       </div>
 
       <div class="grid products">
-        <a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 1</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 2</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 3</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 4</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 5</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 6</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 7</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
-<a class="pCard" href="#">
-          <div class="ph ph--prod"></div>
-          <div class="pCard__title">Produit 8</div>
-          <div class="pCard__meta">Nom court · 34$ CAD</div>
-        </a>
+        <a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 1</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 2</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 3</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 4</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 5</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 6</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 7</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
+<a class="pCard card" href="#">
+        <div class="ph ph--prod"></div>
+        <div class="pCard__title">Produit 8</div>
+        <div class="pCard__meta">Nom court · 34$ CAD</div>
+      </a>
       </div>
     </div>
   </section>
 
+  <!-- USP -->
   <section class="section section--alt">
     <div class="wrap">
       <div class="section__head">
@@ -212,19 +250,19 @@
       </div>
 
       <div class="grid usp">
-        <div class="usp__item">
+        <div class="usp__item cardPad">
           <div class="usp__title">Finition</div>
           <div class="usp__text">Détails propres, look net, photos cohérentes.</div>
         </div>
-        <div class="usp__item">
+        <div class="usp__item cardPad">
           <div class="usp__title">Petites séries</div>
           <div class="usp__text">Moins de “commodité”. Plus de rareté.</div>
         </div>
-        <div class="usp__item">
+        <div class="usp__item cardPad">
           <div class="usp__title">Cadeaux faciles</div>
           <div class="usp__text">Guides cadeaux + seuils de prix simples.</div>
         </div>
-        <div class="usp__item">
+        <div class="usp__item cardPad">
           <div class="usp__title">Confiance</div>
           <div class="usp__text">Livraison, retours, et garanties affichées tôt.</div>
         </div>
@@ -232,34 +270,30 @@
     </div>
   </section>
 
+  <!-- STORY SHORT -->
   <section class="section">
     <div class="wrap">
       <div class="split">
-        <div class="split__media">
-          <div class="ph ph--tall"></div>
-        </div>
-        <div class="split__copy">
-          <p class="kicker">L’histoire (court)</p>
+        <div class="ph ph--tall card"></div>
+        <div class="card cardPad">
+          <div class="kicker">L’histoire (court)</div>
           <h2>Une histoire en 30 secondes.</h2>
-          <p>
-            Une phrase sur le “pourquoi” et le style. Une phrase sur la façon de produire. Une phrase sur ce que ça change pour la cliente.
-            Pas de long bloc sur la home.
-          </p>
-          <a class="btn primary" href="#">En savoir plus</a>
-          <div class="note">
-            Objectif: preuve + confiance, sans détourner de l’achat.
+          <p class="body">3 phrases. Pas plus. La home vend d’abord, le storytelling vient ensuite.</p>
+          <div class="actionsRow">
+            <a class="btn primary" href="#">En savoir plus</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- NEWSLETTER -->
   <section class="section section--alt">
     <div class="wrap">
-      <div class="newsletter">
+      <div class="newsletter card cardPad">
         <div>
           <h2>10% sur la première commande</h2>
-          <p>Inscription rapide. Un email utile, pas du spam.</p>
+          <p class="muted">Inscription rapide. Un email utile, pas du spam.</p>
         </div>
         <form class="form" onsubmit="return false;">
           <input type="email" placeholder="Email" aria-label="Email" />
@@ -269,6 +303,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer__inner">
       <div class="col">
@@ -296,14 +331,6 @@
     </div>
   </footer>
 
-<script>
-  const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('mobileNav');
-  btn?.addEventListener('click', () => {
-    const isHidden = nav.hasAttribute('hidden');
-    if (isHidden) nav.removeAttribute('hidden');
-    else nav.setAttribute('hidden', '');
-  });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
