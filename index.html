@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mockups — Bannières Shopify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">Belinclay — Mockups bannières</div>
+      <div class="hint">3 variations visuelles (A/B/C). Mobile inclus (redimensionne la fenêtre).</div>
+    </div>
+  </header>
+
+  <main class="wrap stack">
+    <!-- OPTION A -->
+    <section class="card">
+      <div class="card__head">
+        <h2>Option A — Un hero fort (statique)</h2>
+        <p>Un seul message + une seule action. Pas de rotation.</p>
+      </div>
+
+      <section class="hero hero--a" aria-label="Hero A">
+        <div class="hero__bg" style="background-image:url('hero.png')"></div>
+        <div class="hero__shade hero__shade--left"></div>
+
+        <div class="hero__content">
+          <div class="kicker">Fait à la main · Petites séries</div>
+          <h1>Bijoux délicats, pensés pour tous les jours</h1>
+          <p>Design minimal, détails soignés. Des pièces qu’on porte longtemps — et qu’on offre facilement.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#">Découvrir la collection</a>
+            <a class="btn btn--ghost" href="#">Voir les nouveautés</a>
+          </div>
+          <div class="micro">Livraison rapide au Canada · Retours simples</div>
+        </div>
+      </section>
+    </section>
+
+    <!-- OPTION B -->
+    <section class="card">
+      <div class="card__head">
+        <h2>Option B — Rotation “par intention” (3 jobs différents)</h2>
+        <p>Chaque slide a un rôle différent. Même gabarit, message différent.</p>
+      </div>
+
+      <section class="slider" aria-label="Hero B slider">
+        <div class="slider__frame">
+          <div class="slide is-active">
+            <div class="hero hero--b">
+              <div class="hero__bg" style="background-image:url('hero.png')"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content">
+                <div class="kicker">Marque</div>
+                <h1>Des pièces discrètes, mais pas oubliables</h1>
+                <p>Une esthétique claire, des matériaux choisis, un assemblage soigné.</p>
+                <div class="actions">
+                  <a class="btn btn--primary" href="#">Découvrir Belinclay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="hero hero--b">
+              <div class="hero__bg" style="background-image:url('hero.png')"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content">
+                <div class="kicker">Collection</div>
+                <h1>Nouvelle collection — nos favoris du moment</h1>
+                <p>Couleurs douces, formes géométriques, port confortable.</p>
+                <div class="actions">
+                  <a class="btn btn--primary" href="#">Magasiner la collection</a>
+                  <a class="btn btn--ghost" href="#">Voir tout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="hero hero--b">
+              <div class="hero__bg" style="background-image:url('hero.png')"></div>
+              <div class="hero__shade hero__shade--left"></div>
+              <div class="hero__content">
+                <div class="kicker">Différenciateur</div>
+                <h1>Petites séries, finies à la main</h1>
+                <p>Contrôle qualité, détails polis, stocks limités. Quand c’est parti, c’est parti.</p>
+                <div class="actions">
+                  <a class="btn btn--primary" href="#">Voir les pièces limitées</a>
+                </div>
+                <div class="micro">Astuce: évite le “slider décoratif”</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__controls">
+          <button class="dot is-active" data-i="0" aria-label="Slide 1"></button>
+          <button class="dot" data-i="1" aria-label="Slide 2"></button>
+          <button class="dot" data-i="2" aria-label="Slide 3"></button>
+          <div class="spacer"></div>
+          <button class="btn btn--small" id="prev">Précédent</button>
+          <button class="btn btn--small" id="next">Suivant</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- OPTION C -->
+    <section class="card">
+      <div class="card__head">
+        <h2>Option C — Éditorial + commerce (split)</h2>
+        <p>Image à gauche, texte à droite. Très lisible, très “boutique”.</p>
+      </div>
+
+      <section class="split" aria-label="Hero C split">
+        <div class="split__media" role="img" aria-label="Photo mannequin" style="background-image:url('hero.png')"></div>
+        <div class="split__copy">
+          <div class="kicker">Sélection</div>
+          <h1>Les essentiels qui matchent avec tout</h1>
+          <p>Une sélection courte pour démarrer: boucles, colliers, pièces faciles à porter au quotidien.</p>
+
+          <div class="value">
+            <div class="value__item">
+              <div class="value__title">Confort</div>
+              <div class="value__desc">Léger, stable, agréable.</div>
+            </div>
+            <div class="value__item">
+              <div class="value__title">Finition</div>
+              <div class="value__desc">Détails propres, look net.</div>
+            </div>
+            <div class="value__item">
+              <div class="value__title">Séries limitées</div>
+              <div class="value__desc">Re-stock selon production.</div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="#">Magasiner les essentiels</a>
+            <a class="btn btn--ghost" href="#">Offrir un cadeau</a>
+          </div>
+          <div class="micro">Idéal si tu veux un look “catalogue premium”.</div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="foot">
+      <div class="foot__inner">
+        <div class="foot__title">Notes</div>
+        <ul>
+          <li>A: meilleur “default” (clarté + perf).</li>
+          <li>B: rotation seulement si chaque slide a un rôle distinct.</li>
+          <li>C: très lisible; fonctionne bien si la marque vend par collections.</li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
