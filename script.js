@@ -1,11 +1,11 @@
 (function(){
-  // Mobile menu
   const btn = document.getElementById('menuBtn');
   const nav = document.getElementById('mobileNav');
 
   function closeMenu(){
-    nav?.setAttribute('hidden','');
-    btn?.setAttribute('aria-expanded','false');
+    if(!nav || !btn) return;
+    nav.setAttribute('hidden','');
+    btn.setAttribute('aria-expanded','false');
   }
   function toggleMenu(){
     if(!nav || !btn) return;
@@ -18,13 +18,8 @@
     }
   }
   btn?.addEventListener('click', toggleMenu);
+  window.addEventListener('resize', () => { if(window.innerWidth > 980) closeMenu(); });
 
-  // Ensure mobile menu is closed when resizing up to desktop
-  window.addEventListener('resize', () => {
-    if(window.innerWidth > 980) closeMenu();
-  });
-
-  // Slider controls (Option B)
   const slides = Array.from(document.querySelectorAll('.slider .slide'));
   const dots = Array.from(document.querySelectorAll('.slider .dot'));
   const prev = document.getElementById('prev');

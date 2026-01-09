@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Homepage mock — Belinclay (light)</title>
+  <title>Belinclay — Mock homepage (light)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- TOP BAR -->
   <div class="topbar">
     <div class="wrap topbar__inner">
       <span>Livraison au Canada · Retours simples · Petites séries</span>
@@ -18,7 +17,6 @@
     </div>
   </div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="wrap header__inner">
       <div class="logo">BELINCLAY</div>
@@ -39,7 +37,6 @@
       </div>
     </div>
 
-    <!-- mobile-only panel -->
     <div class="mobileNav" id="mobileNav" hidden>
       <a href="#">Nouveautés</a>
       <a href="#">Boucles</a>
@@ -50,16 +47,15 @@
     </div>
   </header>
 
-  <!-- HERO: reuse Option B concept (intent-driven slider) -->
   <section class="heroWrap" aria-label="Bannière principale">
     <div class="wrap">
       <div class="slider card">
         <div class="slider__frame">
           <div class="slide is-active">
             <div class="hero hero--b">
-              <div class="hero__bg ph ph--heroImg" aria-label="Image hero (placeholder)"></div>
+              <div class="hero__bg heroImg" aria-label="Image hero"></div>
               <div class="hero__shade hero__shade--left"></div>
-              <div class="hero__content">
+              <div class="hero__content hero__content--left">
                 <div class="kicker">Marque</div>
                 <h1>Des pièces discrètes, nettes, faciles à porter.</h1>
                 <p>Bijoux faits à la main, en petites séries.</p>
@@ -74,13 +70,13 @@
 
           <div class="slide">
             <div class="hero hero--b">
-              <div class="hero__bg ph ph--heroImg" aria-label="Image collection (placeholder)"></div>
+              <div class="hero__bg heroImg" aria-label="Image collection"></div>
               <div class="hero__shade hero__shade--left"></div>
-              <div class="hero__content centerish">
-                <div class="kicker">Collection du mois</div>
+              <div class="hero__content hero__content--center">
+                <div class="kicker">Collection</div>
                 <h1>Une sélection courte, prête à offrir.</h1>
                 <p>4 pièces · dès 30$ CAD · stocks limités.</p>
-                <div class="actionsRow">
+                <div class="actionsRow actionsRow--center">
                   <a class="btn primary" href="#">Magasiner la collection</a>
                 </div>
               </div>
@@ -89,9 +85,9 @@
 
           <div class="slide">
             <div class="hero hero--b">
-              <div class="hero__bg ph ph--heroImg" aria-label="Image détail (placeholder)"></div>
+              <div class="hero__bg heroImg" aria-label="Image détail"></div>
               <div class="hero__shade hero__shade--left"></div>
-              <div class="hero__content minimalish">
+              <div class="hero__content hero__content--minimal">
                 <div class="kicker">Différenciateur</div>
                 <h1>Petites séries. Finition soignée.</h1>
                 <div class="actionsRow">
@@ -107,14 +103,13 @@
           <button class="dot" data-i="1" aria-label="Slide 2"></button>
           <button class="dot" data-i="2" aria-label="Slide 3"></button>
           <div class="spacer"></div>
-          <button class="btn small" id="prev">Précédent</button>
-          <button class="btn small" id="next">Suivant</button>
+          <button class="btn small" id="prev" type="button">Précédent</button>
+          <button class="btn small" id="next" type="button">Suivant</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SHOP ENTRY -->
   <section class="section">
     <div class="wrap">
       <div class="section__head">
@@ -155,7 +150,6 @@
     </div>
   </section>
 
-  <!-- FEATURED COLLECTION -->
   <section class="section section--alt">
     <div class="wrap">
       <div class="feature card">
@@ -185,7 +179,6 @@
     </div>
   </section>
 
-  <!-- BEST SELLERS -->
   <section class="section">
     <div class="wrap">
       <div class="section__head section__head--row">
@@ -241,7 +234,6 @@
     </div>
   </section>
 
-  <!-- USP -->
   <section class="section section--alt">
     <div class="wrap">
       <div class="section__head">
@@ -250,19 +242,19 @@
       </div>
 
       <div class="grid usp">
-        <div class="usp__item cardPad">
+        <div class="card cardPad">
           <div class="usp__title">Finition</div>
           <div class="usp__text">Détails propres, look net, photos cohérentes.</div>
         </div>
-        <div class="usp__item cardPad">
+        <div class="card cardPad">
           <div class="usp__title">Petites séries</div>
           <div class="usp__text">Moins de “commodité”. Plus de rareté.</div>
         </div>
-        <div class="usp__item cardPad">
+        <div class="card cardPad">
           <div class="usp__title">Cadeaux faciles</div>
           <div class="usp__text">Guides cadeaux + seuils de prix simples.</div>
         </div>
-        <div class="usp__item cardPad">
+        <div class="card cardPad">
           <div class="usp__title">Confiance</div>
           <div class="usp__text">Livraison, retours, et garanties affichées tôt.</div>
         </div>
@@ -270,7 +262,6 @@
     </div>
   </section>
 
-  <!-- STORY SHORT -->
   <section class="section">
     <div class="wrap">
       <div class="split">
@@ -287,7 +278,6 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section class="section section--alt">
     <div class="wrap">
       <div class="newsletter card cardPad">
@@ -303,7 +293,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer__inner">
       <div class="col">

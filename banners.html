@@ -3,59 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Option B — Variantes</title>
+  <title>Belinclay — Bannières (Option B)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<main class="wrap stack">
-
-<!-- VERSION B1 -->
-<section class="card">
-  <h2>B1 — Rotation fonctionnelle (tel quel)</h2>
-  <div class="hero left">
-    <div class="bg"></div>
-    <div class="shade"></div>
-    <div class="content">
-      <span class="kicker">Nouveautés</span>
-      <h1>Des pièces discrètes, mais pas oubliables</h1>
-      <p>Design clair, matériaux choisis, assemblage soigné.</p>
-      <a class="btn">Découvrir Belinclay</a>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <span>Variantes de bannières (Option B)</span>
+      <a class="topbar__link" href="index.html">Retour à la homepage</a>
     </div>
   </div>
-</section>
 
-<!-- VERSION B2 -->
-<section class="card">
-  <h2>B2 — Centré (plus proche de son layout)</h2>
-  <div class="hero center">
-    <div class="bg"></div>
-    <div class="shade"></div>
-    <div class="content">
-      <span class="kicker">Collection Kampsos</span>
-      <h1>Bijoux faits à la main</h1>
-      <p>Petites séries · Port confortable · Détails nets</p>
-      <a class="btn">Voir Kampsos</a>
+  <main class="wrap page stack">
+    <div class="pageHead">
+      <h1>Option B — 3 variations</h1>
+      <p class="muted">Même image (hero.png). Trois traitements: gauche, centré, minimal.</p>
     </div>
-  </div>
-</section>
 
-<!-- VERSION B3 -->
-<section class="card">
-  <h2>B3 — Minimal (quasi éditorial)</h2>
-  <div class="hero minimal">
-    <div class="bg"></div>
-    <div class="shade soft"></div>
-    <div class="content">
-      <h1>Collection Kampsos</h1>
-      <a class="btn ghost">Magasiner les colliers</a>
-    </div>
-  </div>
-</section>
+    <section class="card bannerCard">
+      <div class="bannerLabel">B1 — Rotation fonctionnelle (tel quel)</div>
+      <div class="hero hero--b hero--fixed">
+        <div class="hero__bg heroImg" aria-label="Image hero"></div>
+        <div class="hero__shade hero__shade--left"></div>
+        <div class="hero__content hero__content--left">
+          <div class="kicker">Nouveautés</div>
+          <h2>Des pièces discrètes, mais pas oubliables</h2>
+          <p>Design clair, matériaux choisis, assemblage soigné.</p>
+          <div class="actionsRow">
+            <a class="btn primary" href="#">Découvrir Belinclay</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section class="card bannerCard">
+      <div class="bannerLabel">B2 — Centré (plus proche de son layout)</div>
+      <div class="hero hero--b hero--fixed">
+        <div class="hero__bg heroImg" aria-label="Image hero"></div>
+        <div class="hero__shade hero__shade--left"></div>
+        <div class="hero__content hero__content--center">
+          <div class="kicker">Collection Kampsos</div>
+          <h2>Bijoux faits à la main</h2>
+          <p>Petites séries · Port confortable · Détails nets</p>
+          <div class="actionsRow actionsRow--center">
+            <a class="btn primary" href="#">Voir Kampsos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card bannerCard">
+      <div class="bannerLabel">B3 — Minimal (quasi éditorial)</div>
+      <div class="hero hero--b hero--fixed">
+        <div class="hero__bg heroImg" aria-label="Image hero"></div>
+        <div class="hero__shade hero__shade--soft"></div>
+        <div class="hero__content hero__content--minimal hero__content--minimalBottom">
+          <h2>Collection Kampsos</h2>
+          <div class="actionsRow">
+            <a class="btn ghost" href="#">Magasiner les colliers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
