@@ -2,60 +2,308 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Option B — Variantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homepage mock — Bijoux</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<main class="wrap stack">
-
-<!-- VERSION B1 -->
-<section class="card">
-  <h2>B1 — Rotation fonctionnelle (tel quel)</h2>
-  <div class="hero left">
-    <div class="bg"></div>
-    <div class="shade"></div>
-    <div class="content">
-      <span class="kicker">Nouveautés</span>
-      <h1>Des pièces discrètes, mais pas oubliables</h1>
-      <p>Design clair, matériaux choisis, assemblage soigné.</p>
-      <a class="btn">Découvrir Belinclay</a>
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <span>Livraison au Canada · Retours simples · Petites séries</span>
+      <a class="topbar__link" href="banners.html">Voir les variantes de bannières</a>
     </div>
   </div>
-</section>
 
-<!-- VERSION B2 -->
-<section class="card">
-  <h2>B2 — Centré (plus proche de son layout)</h2>
-  <div class="hero center">
-    <div class="bg"></div>
-    <div class="shade"></div>
-    <div class="content">
-      <span class="kicker">Collection Kampsos</span>
-      <h1>Bijoux faits à la main</h1>
-      <p>Petites séries · Port confortable · Détails nets</p>
-      <a class="btn">Voir Kampsos</a>
+  <header class="header">
+    <div class="wrap header__inner">
+      <div class="logo">BELINCLAY</div>
+
+      <nav class="nav">
+        <a href="#">Nouveautés</a>
+        <a href="#">Boucles</a>
+        <a href="#">Colliers</a>
+        <a href="#">Collections</a>
+        <a href="#">Cadeaux</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon" aria-label="Recherche">⌕</button>
+        <button class="icon" aria-label="Compte">○</button>
+        <button class="icon" aria-label="Panier">◻</button>
+        <button class="menu" id="menuBtn" aria-label="Menu">Menu</button>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- VERSION B3 -->
-<section class="card">
-  <h2>B3 — Minimal (quasi éditorial)</h2>
-  <div class="hero minimal">
-    <div class="bg"></div>
-    <div class="shade soft"></div>
-    <div class="content">
-      <h1>Collection Kampsos</h1>
-      <a class="btn ghost">Magasiner les colliers</a>
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="#">Nouveautés</a>
+      <a href="#">Boucles</a>
+      <a href="#">Colliers</a>
+      <a href="#">Collections</a>
+      <a href="#">Cadeaux</a>
+      <a class="muted" href="banners.html">Variantes de bannières</a>
     </div>
-  </div>
-</section>
+  </header>
 
-</main>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="kicker">Bijoux faits à la main · Petites séries</p>
+        <h1>Des pièces discrètes, nettes, faciles à porter.</h1>
+        <p class="sub">
+          Une sélection pensée pour le quotidien: légère, stable, et suffisamment distincte pour se faire remarquer.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#">Magasiner la collection</a>
+          <a class="btn ghost" href="#">Voir les nouveautés</a>
+        </div>
+        <div class="trust">
+          <div class="trust__item"><strong>Livraison</strong><span>rapide</span></div>
+          <div class="trust__item"><strong>Retours</strong><span>simples</span></div>
+          <div class="trust__item"><strong>Stocks</strong><span>limités</span></div>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="ph ph--hero" aria-label="Photo hero (placeholder)"></div>
+        <div class="tag">
+          <div class="tag__title">Collection du mois</div>
+          <div class="tag__meta">4 pièces · dès 30$</div>
+          <a class="tag__link" href="#">Découvrir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Magasiner par catégorie</h2>
+        <p>Entrée rapide. Moins de friction.</p>
+      </div>
+
+      <div class="grid cats">
+        <a class="card" href="#">
+          <div class="ph ph--square"></div>
+          <div class="card__row">
+            <div class="card__title">Boucles</div>
+            <div class="card__meta">Best-sellers</div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="ph ph--square"></div>
+          <div class="card__row">
+            <div class="card__title">Colliers</div>
+            <div class="card__meta">Quotidien</div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="ph ph--square"></div>
+          <div class="card__row">
+            <div class="card__title">Collections</div>
+            <div class="card__meta">Par thème</div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="ph ph--square"></div>
+          <div class="card__row">
+            <div class="card__title">Cadeaux</div>
+            <div class="card__meta">Prêt à offrir</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature__copy">
+          <p class="kicker">À la une</p>
+          <h2>Collection du mois: “Quartz doux”</h2>
+          <p>
+            Une mini-sélection de pièces faciles à porter, avec une palette douce et des formes géométriques.
+            Stocks limités — restock selon production.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#">Voir la collection du mois</a>
+            <a class="btn ghost" href="#">Voir toutes les collections</a>
+          </div>
+          <ul class="bullets">
+            <li>Léger et confortable</li>
+            <li>Finition nette</li>
+            <li>Petites séries</li>
+          </ul>
+        </div>
+        <div class="feature__media">
+          <div class="ph ph--wide"></div>
+          <div class="phRow">
+            <div class="ph ph--small"></div>
+            <div class="ph ph--small"></div>
+            <div class="ph ph--small"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head section__head--row">
+        <div>
+          <h2>Best-sellers</h2>
+          <p>8 produits max sur la home. Le reste sur la collection.</p>
+        </div>
+        <a class="link" href="#">Voir tout</a>
+      </div>
+
+      <div class="grid products">
+        <a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 1</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 2</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 3</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 4</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 5</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 6</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 7</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+<a class="pCard" href="#">
+          <div class="ph ph--prod"></div>
+          <div class="pCard__title">Produit 8</div>
+          <div class="pCard__meta">Nom court · 34$ CAD</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Pourquoi ça se vend</h2>
+        <p>Clarté + preuve + simplicité.</p>
+      </div>
+
+      <div class="grid usp">
+        <div class="usp__item">
+          <div class="usp__title">Finition</div>
+          <div class="usp__text">Détails propres, look net, photos cohérentes.</div>
+        </div>
+        <div class="usp__item">
+          <div class="usp__title">Petites séries</div>
+          <div class="usp__text">Moins de “commodité”. Plus de rareté.</div>
+        </div>
+        <div class="usp__item">
+          <div class="usp__title">Cadeaux faciles</div>
+          <div class="usp__text">Guides cadeaux + seuils de prix simples.</div>
+        </div>
+        <div class="usp__item">
+          <div class="usp__title">Confiance</div>
+          <div class="usp__text">Livraison, retours, et garanties affichées tôt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="split__media">
+          <div class="ph ph--tall"></div>
+        </div>
+        <div class="split__copy">
+          <p class="kicker">L’histoire (court)</p>
+          <h2>Une histoire en 30 secondes.</h2>
+          <p>
+            Une phrase sur le “pourquoi” et le style. Une phrase sur la façon de produire. Une phrase sur ce que ça change pour la cliente.
+            Pas de long bloc sur la home.
+          </p>
+          <a class="btn primary" href="#">En savoir plus</a>
+          <div class="note">
+            Objectif: preuve + confiance, sans détourner de l’achat.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="newsletter">
+        <div>
+          <h2>10% sur la première commande</h2>
+          <p>Inscription rapide. Un email utile, pas du spam.</p>
+        </div>
+        <form class="form" onsubmit="return false;">
+          <input type="email" placeholder="Email" aria-label="Email" />
+          <button class="btn primary" type="submit">S’inscrire</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="col">
+        <div class="logo logo--small">BELINCLAY</div>
+        <p class="muted">Bijoux faits à la main · Canada</p>
+      </div>
+      <div class="col">
+        <div class="ftTitle">Boutique</div>
+        <a href="#">Nouveautés</a>
+        <a href="#">Boucles</a>
+        <a href="#">Colliers</a>
+        <a href="#">Collections</a>
+      </div>
+      <div class="col">
+        <div class="ftTitle">Aide</div>
+        <a href="#">Livraison</a>
+        <a href="#">Retours</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="col">
+        <div class="ftTitle">Mockups</div>
+        <a href="banners.html">Variantes de bannières</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mobileNav');
+  btn?.addEventListener('click', () => {
+    const isHidden = nav.hasAttribute('hidden');
+    if (isHidden) nav.removeAttribute('hidden');
+    else nav.setAttribute('hidden', '');
+  });
+</script>
 </body>
 </html>
